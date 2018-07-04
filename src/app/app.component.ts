@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
     (<FormArray>this.signUpForm.get('hobbies')).push(newfc);
   }
 
-  forbiddenUname (control: FormControl): {[s:string]: boolean} {
+  forbiddenUname (control: FormControl): {[s: string]: boolean} {
     if (this.forbiddenUserName.indexOf(control.value) !== -1) {
       return {'forbiddentUname': true};
     }
